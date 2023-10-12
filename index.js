@@ -63,6 +63,8 @@ document.addEventListener('keydown', (event)=>{
         }
     }
 })
+
+// this function is for rendering the note properly
 let render = function Render(task){
     // const div = document.createElement("div");
     // div.setAttribute("id", `${task.id}`)
@@ -90,14 +92,15 @@ let render = function Render(task){
     // console.log(task.check);
 }
 
+// this is when I retrieve from the localStorage 
 for(let i=0; i<localStorage.length; i++){
     let n = localStorage.key(i);
     let task = JSON.parse(localStorage.getItem(n));
     all.push(n);
     render(task);
-    // uncomplete.push(n);
 }
 
+// this is for count the total task 
 function counttask(){
     taskcount.textContent = localStorage.length;
 }
@@ -187,7 +190,6 @@ function deletetask(event){
 
 
 // checkbox funcationality
-
 document.addEventListener('click', (event)=>{
     let id = document.getElementById(`${event.target.id}`);
     for(let i=0; i<all.length; i++){
@@ -242,9 +244,9 @@ for(let i=0; i<all.length; i++){
     }
 }
 
+// this is for complete all tasks and clear complete tasks
 let comall = document.getElementById('comp-task');
 let clearall = document.getElementById('clear-com');
-
 comall.addEventListener('click', ()=>{
     for(let i=0; i<all.length; i++){
         let allcheckbox = document.getElementById(`check-${all[i]}`);
@@ -257,7 +259,6 @@ comall.addEventListener('click', ()=>{
         localStorage.setItem(`${all[i]}`, JSON.stringify(obj));
     }
 })
-
 clearall.addEventListener('click', ()=>{
     for(let i=0; i<all.length; i++){
         let allcheckbox = document.getElementById(`check-${all[i]}`);
@@ -269,20 +270,3 @@ clearall.addEventListener('click', ()=>{
         } 
     }
 })
-
-
-
-// animations in js 
-// let move = function(animateid){
-//     let id = document.getElementById(`congo-${animateid}`);
-//     console.log(id);
-//     id.childNodes[1].style.display = 'block';
-//     id.childNodes[1].classList.add('congo');
-//     window.location.reload();
-//     // removecongo(id);
-//     setTimeout(removecongo(id),1000);
-// }
-// let removecongo = function(id){
-//     id.style.display = 'none';
-// }
-
