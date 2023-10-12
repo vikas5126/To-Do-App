@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    font-family: cursive;
+}
+body{
+    background: linear-gradient(-90deg, lightgray, white);
+    width: 99vw;
+    height: 99vh;
+}
+hr{
+    width: 85%;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+#app{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 3rem;
+    border-radius: 10px;
+    background-color: white;
+    align-items: center;
+    box-shadow: gray 2px 2px 2px 2px;
+}
+#task{
+    position: relative;
+    width: 88%;
+    margin-left: 3%;
+}
+#note-icon{
+    position: absolute;
+    font-size: 1.5rem;
+    /* margin-top: 2rem; */
+    top: 2.5rem;
+    left: 1rem;
+}
+#content{
+    width: 88%;
+    height: 2.5rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding-left: 3rem;
+    border-radius: 10px;
+    border: none;
+    background-color: #d4daf5;
+}
+#addnote-icon{
+    position: absolute;
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    cursor: pointer;
+    display: none;
+    right: 9%;
+}
+#task-report{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    color: lightgray;
+    margin-top: 1rem;
+}
+#report{
+    display: flex;
+    width: 10rem;
+    justify-content: space-around;
+    cursor: pointer;
+}
+#clear-com{
+    cursor: pointer;
+}
+#task-container{
+    display: flex;
+    width: 85%;
+    flex-direction: column;
+    margin: 1rem 0rem 1rem 0rem;
+}
+.container{
+    display: flex;
+    margin-top: 1rem;
+    position: relative;
+}
+.content{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.checkbox input{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+.deletebtn{
+    /* background-image: url('./img/x-mark.png'); */
+    /* background-repeat: no-repeat; */
+    /* width: 26px;
+    height: 24px; */
+    /* border-radius: 50%; */
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    background: white;
+    /* display: none; */
+}
+/* .deletebtn:hover{
+    display: none;
+} */
+#footer{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    color: gray;
+    margin-bottom: 1rem;
+}
+#buttons{
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+}
+/* .congo{
+    display: none;
+    position: absolute;
+    left: 2rem;
+    width: 3rem;
+} */
+.congo{
+    position: absolute;
+    left: 3rem;
+    border: 2px solid red;
+    background-color: antiquewhite;
+    width: 6rem;
+    text-align: center;
+    /* display: none;  */
+    animation-name: congratulations;
+    animation-duration: 0.5s;
+
+}
+@keyframes congratulations {
+    0%  {left:20px;}
+    100% {left:48px}
+}

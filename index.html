@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div id="task">
+            <i class="fa-solid fa-note-sticky" style="color: #31415e;" id="note-icon"></i>
+            <span>
+                <input type="text" id="content" placeholder="Type Your Todo List" onclick="show()" required>
+            </span>
+            <i class="fa-solid fa-circle-plus" id="addnote-icon" style="color: #31415e;" ></i>
+        </div>
+        <div id="task-report">
+            <div id="report">
+                <span>
+                    <img src="img/read.png" alt="#" style="height: 20px;">
+                </span>
+                <span id="comp-task"> Complete all tasks</span>
+            </div>
+            <div><span id="clear-com">Clear Completed</span></div>
+        </div>
+        <hr>
+        <div id="task-container">
+            <!-- <div class="checkbox">
+                <input type="checkbox">
+            </div>
+            <div class="content">
+                <p>task content</p>
+            </div>
+            <div id="deleteicon">
+                <i class="fa-regular fa-circle-xmark" style="color: #eb0000;"></i>
+            </div>
+            <input type="button" id="deleteicon"> -->
+            
+        </div>
+        <hr>
+        <div id="footer">
+            <div>
+                <span id="task-count" style="font-weight: 600;">0</span>
+                <span>Task Left</span>
+            </div> 
+            <div id="buttons">
+                <span id="all" style="font-weight: 800;">All</span>
+                <span id="Uncompelete">Uncompelete</span>
+                <span id="Completed">Completed</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a2466d3c1a.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
